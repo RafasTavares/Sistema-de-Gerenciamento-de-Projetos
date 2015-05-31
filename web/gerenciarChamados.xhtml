@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Gerenciador de Projetos</title>
+    </h:head>
+    <h:body>
+        <h1>Gerenciador de Chamados</h1>
+        <h:form>
+            Descrição chamado <h:inputText value="#{ChamadosController.chamado.NM_CHAMADO}"/><br/>
+            Data Chamado <h:inputText value="#{ChamadosController.chamado.DT_CHAMADO}"/><br/>
+            </h:selectOneMenu><br/>
+            <h:commandButton action="#{ChamadosController.adicionarChamado}" value="Novo Chamado"/>
+            <h:commandButton action="#{ChamadosController.alterarChamado}" value="Alterar Chamado"/>
+            <br/>
+            <h:commandLink action="index" value="Voltar"/>
+        </h:form>
+    </h:body>
+</html>

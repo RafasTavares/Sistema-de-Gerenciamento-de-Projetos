@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="Model.Chamados" table="TB_CHAMADOS"/>
+    <class name="Model.Empresas" table="TB_EMPRESAS"/>
+    <class name="Model.Projetos" table="TB_PROJETOS"/>
+    <class name="Model.Tarefas" table="TB_TAREFAS"/>
+</hibernate-mapping>
