@@ -40,14 +40,14 @@ public class TarefasController {
         return "GerenciarTarefas";
     }
 
-    public String ExcluirChamado() {
+    public String ExcluirTarefa() {
         Tarefas tarefaTemp = (Tarefas) (listaTarefas.getRowData());
         TarefasDAO dao = new TarefasDAOImp();
         dao.remove(tarefaTemp);
         return "index";
     }
 
-    public String AddChamado() {
+    public String AddTarefa() {
         TarefasDAO dao = new TarefasDAOImp();
         dao.save(tarefa);
         return "index";
