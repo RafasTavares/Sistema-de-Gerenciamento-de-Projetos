@@ -9,13 +9,12 @@
     <h:body>
         <h1>Gerenciador de Chamados</h1>
         <h:form>
-            Descrição chamado <h:inputText value="#{ChamadosController.chamado.NM_CHAMADO}"/><br/>
-            Data Chamado <h:inputText value="#{ChamadosController.chamado.DT_CHAMADO}"/><br/>
-            </h:selectOneMenu><br/>
-            <h:commandButton action="#{ChamadosController.adicionarChamado}" value="Novo Chamado"/>
-            <h:commandButton action="#{ChamadosController.alterarChamado}" value="Alterar Chamado"/>
+            Descrição chamado <h:inputText value="#{chamadosController.chamado.NM_CHAMADO}"/><br/>
+            Data Chamado <h:inputText value="#{chamadosController.chamado.DT_CHAMADO}"/><br/>
+            <h:commandButton action="#{chamadosController.adicionarChamado}" value="Novo Chamado"/>
+            <h:commandButton action="#{chamadosController.alterarChamado}" value="Alterar Chamado"/>
             <br/>
-            <h:commandLink action="index" value="Voltar"/>
+            <h:commandLink action="index" value="Voltar"/> 
         </h:form>
     </h:body>
 </html>

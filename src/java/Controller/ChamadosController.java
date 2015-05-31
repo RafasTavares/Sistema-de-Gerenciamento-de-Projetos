@@ -9,10 +9,6 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
-/**
- *
- * @author José Alexandre
- */
 @ManagedBean
 @SessionScoped
 public class ChamadosController {
@@ -30,34 +26,34 @@ public class ChamadosController {
         return chamado;
     }
 
-    public void serChamado(Chamados chamado) {
+    public void setChamado(Chamados chamado) {
         this.chamado = chamado;
     }
 
-    public String prepararAdicionarChamado() {
+    public String PrepararAddChamado() {
         chamado = new Chamados();
-        return "gerenciarChamados";
+        return "GerenciarTarefas";
     }
 
-    public String prepararAlterarChamado() {
+    public String PrepararAlterarChamado() {
         chamado = (Chamados) (listaChamados.getRowData());
-        return "gerenciarChamados";
+        return "GerenciarTarefas";
     }
 
-    public String excluirChamado() {
+    public String ExcluirChamado() {
         Chamados chamadoTemp = (Chamados) (listaChamados.getRowData());
         ChamadosDAO dao = new ChamadosDAOImp();
         dao.remove(chamadoTemp);
         return "index";
     }
 
-    public String adicionarChamado() {
+    public String AddChamado() {
         ChamadosDAO dao = new ChamadosDAOImp();
         dao.save(chamado);
         return "index";
     }
 
-    public String alterarLivro() {
+    public String AlterarChamado() {
         ChamadosDAO dao = new ChamadosDAOImp();
         dao.update(chamado);
         return "index";
