@@ -5,8 +5,9 @@
         <group>
             <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/web/index.xhtml</file>
             <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Controller/ChamadosController.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/web/gerenciarChamados.xhtml</file>
+            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Model/Empresas.java</file>
             <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Model/Chamados.java</file>
+            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/web/ManterEmpresas.xhtml</file>
         </group>
     </open-files>
 </project-private>
