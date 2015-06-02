@@ -14,4 +14,5 @@ public interface ChamadosDAO {
     public void remove(Chamados chamado);
 
     public void update(Chamados chamado);
+
 }

@@ -9,7 +9,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
-@ManagedBean(name = "GerenciarTarefas")
+@ManagedBean
 @SessionScoped
 public class TarefasController {
 
