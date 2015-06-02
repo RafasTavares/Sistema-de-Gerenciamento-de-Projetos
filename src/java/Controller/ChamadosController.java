@@ -4,13 +4,13 @@ import DAO.ChamadosDAO;
 import DAO.ChamadosDAOImp;
 import Model.Chamados;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.inject.Named;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
-@ManagedBean
 @SessionScoped
+@Named
 public class ChamadosController {
 
     private Chamados chamado;
