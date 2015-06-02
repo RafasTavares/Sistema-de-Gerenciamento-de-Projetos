@@ -17,7 +17,8 @@ public class ChamadosController {
     private DataModel listaChamados;
 
     public DataModel ListarChamados() {
-        List<Chamados> lista = new ChamadosDAOImp().list();
+        List<Chamados> lista;
+        lista = new ChamadosDAOImp().list();
         listaChamados = new ListDataModel(lista);
         return listaChamados;
     }

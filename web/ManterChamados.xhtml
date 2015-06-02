@@ -8,25 +8,25 @@
     </h:head>
     <h:body>
         <h1>Chamados</h1>
-        <h:dataTable var="chamado" value="#{ChamadosController.ListarChamados}">
+        <h:dataTable var="chamado" value="#{chamadosController.listarChamados}">
             <h:column>
                 <f:facet name="header">
                     <h:outputText value="Nome Chamado"/>
                 </f:facet>
-                <h:outputText value="#{Chamado.NM_CHAMADO}" />
+                <h:outputText value="#{chamado.NM_CHAMADO}" />
             </h:column>
             <h:column>
                 <f:facet name="header">
                     <h:outputText value="Data chamado"/>
                 </f:facet>
-                <h:outputText value="#{Chamado.DT_CHAMADO}"/>
+                <h:outputText value="#{chamado.DT_CHAMADO}"/>
             </h:column>
             <h:column>
                 <f:facet name="header">
                     <h:outputText value="Alterar"/>
                 </f:facet>
                 <h:form>
-                    <h:commandButton action="#{ChamadosController.PrepararAlterarChamado}" value="Alterar"/>
+                    <h:commandButton action="#{chamadosController.prepararAlterarChamado}" value="Alterar"/>
                 </h:form>
             </h:column>
             <h:column>
@@ -34,13 +34,13 @@
                     <h:outputText value="Excluir"/>
                 </f:facet>
                 <h:form>
-                    <h:commandButton action="#{ChamadosController.ExcluirChamado}" value="Excluir"/>
+                    <h:commandButton action="#{chamadosController.excluirChamado}" value="Excluir"/>
                 </h:form>
             </h:column>
         </h:dataTable>
         <br/>
         <h:form>
-            <h:commandLink value="Novo Chamado" action="#{chamadosController.PrepararAddChamado}"/>
+            <h:commandLink value="Novo Chamado" action="#{chamadosController.prepararAddChamado}"/>
         </h:form>
     </h:body>
 </html>
