@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Gerenciador de Projetos</title>
+    </h:head>
+    <h:body>
+        <h1>Chamados</h1>
+
+        <p:dataTable var="chamado" value="#{ManterChamados.getListarChamados}">
+            <p:column headerText="Id">
+                <h:outputText value="#{chamado.ID_CHAMADO}" />
+            </p:column>
+
+            <p:column headerText="Nome">
+                <h:outputText value="#{chamado.NM_CHAMADO}" />
+            </p:column>
+
+            <p:column headerText="Data">
+                <h:outputText value="#{chamado.DT_CHAMADO}" />
+            </p:column>
+
+            <p:column headerText="Alterar">
+                <h:form>
+                    <h:commandButton action="#{ManterChamados.prepararAlterarChamado}" value="Alterar"/>
+                </h:form>
+            </p:column>
+            <p:column>
+                <h:form>
+                    <h:commandButton action="#{ManterChamados.excluirChamado}" value="Excluir"/>
+                </h:form>
+            </p:column>
+        </p:dataTable>
+        <br/>
+        <h:form>
+            <p:commandLink id="nonAjax" ajax="false" actionListener="#{ManterChamados.prepararAddChamado}">
+                <h:outputText value="Novo Chamado" />
+            </p:commandLink>
+
+        </h:form>
+    </h:body>
+</html>

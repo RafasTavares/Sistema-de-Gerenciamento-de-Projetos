@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Gerenciador de Projetos</title>
+    </h:head>
+    <h:body>
+        <h1>Gerenciador de Empresas</h1>
+        <h:form>
+            Nome <h:inputText value="#{empresasController.empresa.NM_EMPRESA}"/><br/>
+            Descrição <h:inputText value="#{empresasController.empresa.DS_EMPRESA}"/><br/>
+            Data Abertura <h:inputText value="#{empresasController.empresa.DT_ABERTURA}"/><br/>
+            <h:commandButton action="#{chamadosController.adicionarChamado}" value="Novo Chamado"/>
+            <h:commandButton action="#{chamadosController.alterarChamado}" value="Alterar Chamado"/>
+            <br/>
+            <h:commandLink action="index" value="Voltar"/> 
+        </h:form>
+    </h:body>
+</html>
