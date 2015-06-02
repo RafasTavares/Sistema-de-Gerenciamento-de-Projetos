@@ -4,21 +4,21 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
-@ManagedBean
+@ManagedBean (name = "index")
 @SessionScoped
 public class IndexController {
 
     public String ManterChamados() {
-        return "ManterChamados.xhtml";
+        return "Chamados/ManterChamados.xhtml";
     }
     public String ManterTarefas() {
-        return "ManterTarefas.xhtml";
+        return "Tarefas/ManterTarefas.xhtml";
     }
     public String ManterProjetos() {
-        return "ManterProjetos.xhtml";
+        return "Projetos/ManterProjetos.xhtml";
     }
     public String ManterEmpresas() {
-        return "ManterEmpresas.xhtml";
+        return "Empresas/ManterEmpresas.xhtml";
     }
     
 }

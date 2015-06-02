@@ -2,57 +2,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Gerenciador de Projetos</title>
     </h:head>
     <h:body>
-        <h1>Tarefas</h1>
-        <h:dataTable var="tarefa" value="#{tarefasController.ListarTarefas}">
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Nome"/>
-                </f:facet>
-                <h:outputText value="#{tarefas.NM_TAREFAS}" />
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Descrição"/>
-                </f:facet>
-                <h:outputText value="#{Chamado.DS_TAREFA}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Data Inicial"/>
-                </f:facet>
-                <h:outputText value="#{Chamado.DT_INICIAL}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Data Final"/>
-                </f:facet>
-                <h:outputText value="#{Chamado.DT_FINAL}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Alterar"/>
-                </f:facet>
-                <h:form>
-                    <h:commandButton action="#{tarefasController.prepararAlterarTarefa}" value="Alterar"/>
-                </h:form>
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Excluir"/>
-                </f:facet>
-                <h:form>
-                    <h:commandButton action="#{tarefasController.excluirTarefa}" value="Excluir"/>
-                </h:form>
-            </h:column>
-        </h:dataTable>
+        <h3 style="margin-top:0">Tarefas</h3>
+        <p:dataTable var="tarefa" value="#{tarefasController.ListarTarefas}">
+            <p:column headerText="Nome">
+                <h:outputText value="#{tarefa.MM_TAREFA}" />
+            </p:column>
+
+            <p:column headerText="Descrição">
+                <h:outputText value="#{tarefa.DS_TAREFA}" />
+            </p:column>
+
+            <p:column headerText="Data Inicial">
+                <h:outputText value="#{tarefa.DT_INICIAL}" />
+            </p:column>
+
+            <p:column headerText="Data Final">
+                <h:outputText value="#{tarefa.DT_FINAL}" />
+            </p:column>
+            <p:column>
+                <p:button outcome="AlterarProjeto" value="Alterar" icon="ui-icon-star">
+                </p:button>
+            </p:column>
+            <p:column>
+                <p:button outcome="ExcluirProjeto" value="Excluir" icon="ui-icon-star">
+                </p:button>
+            </p:column>
+        </p:dataTable>
         <br/>
         <h:form>
-            <h:commandLink value="Nova Tarefa" action="#{tarefasController.prepararAddTarefa}"/>
+            <p:commandLink id="nonAjax" actionListener="#{tarefasController.prepararAddTarefa}" ajax="false">
+                <h:outputText value="Nova Tarefa" />
+            </p:commandLink>
         </h:form>
     </h:body>
 </html>

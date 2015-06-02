@@ -6,14 +6,12 @@ import Model.Chamados;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.inject.Named;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
-@ManagedBean(name = "GerenciarChamados")
+@ManagedBean
 @SessionScoped
-public class ChamadosController {
-
+public class ManterChamadosController {
     private Chamados chamado;
     private DataModel listaChamados;
 
@@ -33,12 +31,12 @@ public class ChamadosController {
 
     public String PrepararAddChamado() {
         chamado = new Chamados();
-        return "Chamados/GerenciarChamados";
+        return "GerenciarTarefas";
     }
 
     public String PrepararAlterarChamado() {
         chamado = (Chamados) (listaChamados.getRowData());
-        return "Chamados/GerenciarChamados";
+        return "GerenciarTarefas";
     }
 
     public String ExcluirChamado() {
