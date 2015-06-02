@@ -8,9 +8,10 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
+import javax.inject.Named;
 
-@ManagedBean
 @SessionScoped
+@Named
 public class EmpresasController {
 
     private Empresas empresa;

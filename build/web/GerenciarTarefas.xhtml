@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Gerenciador de Projetos</title>
+    </h:head>
+    <h:body>
+        <h1>Gerenciador de Projetos</h1>
+        <h:form>
+            Nome <h:inputText value="#{tarefasController.tarefa.MN_TAFERA}"/><br/>
+            Descrição <h:inputText value="#{tarefasController.tarefa.DS_TAREFA}"/><br/>
+            Data Inicial <h:inputText value="#{tarefasController.tarefa.DT_INICIAL}"/><br/>
+            Data Final <h:inputText value="#{tarefasController.tarefa.DT_FINAL}"/><br/>
+            <h:commandButton action="#{tarefasController.addTarefa}" value="Nova Tarefa"/>
+            <h:commandButton action="#{tarefasController.alterarTarefa}" value="Alterar Tarefa"/>
+            <br/>
+            <h:commandLink action="index" value="Voltar"/> 
+        </h:form>
+    </h:body>
+</html>
