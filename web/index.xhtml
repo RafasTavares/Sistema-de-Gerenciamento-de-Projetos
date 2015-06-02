@@ -8,10 +8,13 @@
     </h:head>
     <h:body>
         <h:form>
-            <h:commandLink value="Novo Chamado" action="#{indexController.ManterChamados}"/>
-            <h:commandLink value="Nova Tarefa" action="#{indexController.ManterTarefas}"/>
-            <h:commandLink value="Nova Empresa" action="#{indexController.ManterEmpresas}"/>
-            <h:commandLink value="Novo Projeto" action="#{indexController.ManterProjetos}"/>
+            <ul>
+                
+                <li><h:commandLink value="Novo Chamado" action="#{indexController.ManterChamados}"/></li><br/>
+            <li><h:commandLink value="Nova Tarefa" action="#{indexController.ManterTarefas}"/></li><br/>
+           <li><h:commandLink value="Nova Empresa" action="#{indexController.ManterEmpresas}"/></li><br/>
+            <li><h:commandLink value="Novo Projeto" action="#{indexController.ManterProjetos}"/></li><br/>
+            </ul>
         </h:form>
     </h:body>
 </html>

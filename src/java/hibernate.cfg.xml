@@ -6,6 +6,5 @@
     <property name="hibernate.connection.url">jdbc:sqlserver://LOCALHOST;databaseName=DB_SGP</property>
     <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.connection.password">A@123456</property>
-    <mapping resource="hibernate.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
