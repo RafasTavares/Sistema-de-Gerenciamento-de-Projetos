@@ -13,7 +13,7 @@ public class EmpresasDAOImp implements EmpresasDAO {
     @Override
     public void save(Empresas empresa) {
         Session session;
-        session = HibernateUtil.getSession();
+        session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
         Serializable save = session.save(empresa);
         t.commit();
@@ -21,13 +21,13 @@ public class EmpresasDAOImp implements EmpresasDAO {
 
     @Override
     public Empresas getEmpresas(int id) {
-        Session session = HibernateUtil.getSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         return (Empresas) session.load(Chamados.class, id);
     }
 
     @Override
     public List<Empresas> list() {
-        Session session = HibernateUtil.getSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
         List lista = session.createQuery("from TB_EMPRESAS").list();
         t.commit();
@@ -36,7 +36,7 @@ public class EmpresasDAOImp implements EmpresasDAO {
 
     @Override
     public void remove(Empresas empresa) {
-        Session session = HibernateUtil.getSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
         session.delete(empresa);
         t.commit();
@@ -44,7 +44,7 @@ public class EmpresasDAOImp implements EmpresasDAO {
 
     @Override
     public void update(Empresas empresa) {
-        Session session = HibernateUtil.getSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
         session.update(empresa);
         t.commit();

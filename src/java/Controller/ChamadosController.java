@@ -1,4 +1,4 @@
-package Controller.Chamados;
+package Controller;
 
 import DAO.ChamadosDAO;
 import Dao.ChamadosDAOImp;
@@ -10,17 +10,17 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
 @SessionScoped
-@Named (value = "ManterChamados")
+@Named
 public class ChamadosController {
 
     private Chamados chamado;
     private DataModel listaChamados;
 
-    public DataModel getListarChamados() {
+    public DataModel getListarLivros() {
         List<Chamados> lista = new ChamadosDAOImp().list();
         listaChamados = new ListDataModel(lista);
         return listaChamados;
-    }
+     }
 
     public Chamados getChamado() {
         return chamado;
@@ -32,12 +32,12 @@ public class ChamadosController {
 
     public String PrepararAddChamado() {
         chamado = new Chamados();
-        return "GerenciarChamados";
+        return "GerenciarTarefas";
     }
 
     public String PrepararAlterarChamado() {
         chamado = (Chamados) (listaChamados.getRowData());
-        return "GerenciarChamados";
+        return "GerenciarTarefas";
     }
 
     public String ExcluirChamado() {
@@ -46,7 +46,8 @@ public class ChamadosController {
         dao.remove(chamadoTemp);
         return "index";
     }
-     public String AddChamado() {
+
+    public String AddChamado() {
         ChamadosDAO dao = (ChamadosDAO) new ChamadosDAOImp();
         dao.save(chamado);
         return "index";
@@ -57,5 +58,4 @@ public class ChamadosController {
         dao.update(chamado);
         return "index";
     }
-
 }
