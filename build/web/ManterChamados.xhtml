@@ -2,45 +2,43 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Gerenciador de Projetos</title>
     </h:head>
     <h:body>
         <h1>Chamados</h1>
-        <h:dataTable var="chamado" value="#{chamadosController.listarChamados}">
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Nome Chamado"/>
-                </f:facet>
+
+        <p:dataTable var="chamado" value="#{chamadosController.listarChamados}">
+            <p:column headerText="Id">
+                <h:outputText value="#{chamado.ID_CHAMADO}" />
+            </p:column>
+
+            <p:column headerText="Nome">
                 <h:outputText value="#{chamado.NM_CHAMADO}" />
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Data chamado"/>
-                </f:facet>
-                <h:outputText value="#{chamado.DT_CHAMADO}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Alterar"/>
-                </f:facet>
+            </p:column>
+
+            <p:column headerText="Data">
+                <h:outputText value="#{chamado.DT_CHAMADO}" />
+            </p:column>
+
+            <p:column headerText="Alterar">
                 <h:form>
                     <h:commandButton action="#{chamadosController.prepararAlterarChamado}" value="Alterar"/>
                 </h:form>
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                    <h:outputText value="Excluir"/>
-                </f:facet>
+            </p:column>
+            <p:column>
                 <h:form>
                     <h:commandButton action="#{chamadosController.excluirChamado}" value="Excluir"/>
                 </h:form>
-            </h:column>
-        </h:dataTable>
+            </p:column>
+        </p:dataTable>
         <br/>
         <h:form>
-            <h:commandLink value="Novo Chamado" action="#{chamadosController.prepararAddChamado}"/>
+            <p:commandLink id="nonAjax" ajax="false" actionListener="#{chamadosController.prepararAddChamado}">
+                <h:outputText value="Novo Chamado" />
+            </p:commandLink>
+
         </h:form>
     </h:body>
 </html>

@@ -4,7 +4,7 @@ import Model.Chamados;
 import java.util.List;
 
 public interface ChamadosDAO {
- 
+
     public void save(Chamados chamado);
 
     public Chamados getChamado(int id);
