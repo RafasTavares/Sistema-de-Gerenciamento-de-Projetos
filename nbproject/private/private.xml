@@ -4,24 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/web/index.xhtml</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Controller/Chamados/GerenciarChamadosController.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Controller/ProjetosController.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/web/ManterTarefas.xhtml</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/hibernate5.cfg.xml</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Controller/TarefasController.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/DAO/ChamadosDAOImp.java</file>
             <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/nbproject/build-impl.xml</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/DAO/ProjetosDAOImp.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Controller/EmpresasController.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/web/ManterProjetos.xhtml</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/web/GerenciarChamados.xhtml</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Controller/IndexController.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/DAO/TarefasDAOImp.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/DAO/EmpresasDAOImp.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Controller/Chamados/ChamadosController.java</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/web/ManterChamados.xhtml</file>
-            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Util/HibernateUtil.java</file>
+            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/build/generated-sources/ap-source-output/Model/Empresas_.java</file>
+            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/build/generated-sources/ap-source-output/Model/Tarefas_.java</file>
             <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/src/java/Model/Chamados.java</file>
+            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/build/generated-sources/ap-source-output/Model/Projetos_.java</file>
+            <file>file:/C:/Users/Rafael/Documents/GitHub/Sistema%20de%20Gerenciamento%20de%20Projetos/build/generated-sources/ap-source-output/Model/Chamados_.java</file>
         </group>
     </open-files>
 </project-private>
