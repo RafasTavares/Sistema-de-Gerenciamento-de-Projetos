@@ -3,8 +3,8 @@
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-    <property name="hibernate.connection.url">jdbc:sqlserver://v7rirkv5qa.database.windows.net;databaseName=DB_SGP</property>
-    <property name="hibernate.connection.username">system</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://LOCALHOST;databaseName=DB_SGP</property>
+    <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.connection.password">A@123456</property>
     <mapping resource="hibernate.hbm.xml"/>
   </session-factory>
