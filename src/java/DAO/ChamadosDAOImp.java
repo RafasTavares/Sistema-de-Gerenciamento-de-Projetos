@@ -13,20 +13,20 @@ import org.hibernate.Transaction;
 public class ChamadosDAOImp implements ChamadosDAO {
 
     public void save(Chamados chamado) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSession();
         Transaction t = session.beginTransaction();
         session.save(chamado);
         t.commit();
     }
 
     public Chamados getChamado(int id) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSession();
         return (Chamados) session.load(Chamados.class, id);
     }
 
     @SuppressWarnings("unchecked")
     public List<Chamados> list() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSession();
         Transaction t = session.beginTransaction();
         @SuppressWarnings("rawtypes")
         List lista = session.createQuery("from Chamados").list();
@@ -35,14 +35,14 @@ public class ChamadosDAOImp implements ChamadosDAO {
     }
 
     public void remove(Chamados chamado) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSession();
         Transaction t = session.beginTransaction();
         session.delete(chamado);
         t.commit();
     }
 
     public void update(Chamados chamado) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSession();
         Transaction t = session.beginTransaction();
         session.update(chamado);
         t.commit();

@@ -9,7 +9,7 @@
     <h:body>
         <h1>Chamados</h1>
 
-        <p:dataTable var="chamado" value="#{chamadosController.listarChamados}">
+        <p:dataTable var="chamado" value="#{ManterChamados.getListarChamados}">
             <p:column headerText="Id">
                 <h:outputText value="#{chamado.ID_CHAMADO}" />
             </p:column>
@@ -24,18 +24,18 @@
 
             <p:column headerText="Alterar">
                 <h:form>
-                    <h:commandButton action="#{chamadosController.prepararAlterarChamado}" value="Alterar"/>
+                    <h:commandButton action="#{ManterChamados.prepararAlterarChamado}" value="Alterar"/>
                 </h:form>
             </p:column>
             <p:column>
                 <h:form>
-                    <h:commandButton action="#{chamadosController.excluirChamado}" value="Excluir"/>
+                    <h:commandButton action="#{ManterChamados.excluirChamado}" value="Excluir"/>
                 </h:form>
             </p:column>
         </p:dataTable>
         <br/>
         <h:form>
-            <p:commandLink id="nonAjax" ajax="false" actionListener="#{chamadosController.prepararAddChamado}">
+            <p:commandLink id="nonAjax" ajax="false" actionListener="#{ManterChamados.prepararAddChamado}">
                 <h:outputText value="Novo Chamado" />
             </p:commandLink>
 
