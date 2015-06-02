@@ -1,49 +1,48 @@
-package DAO;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Dao;
 
-import Util.HibernateUtilCongfig;
 import Model.Chamados;
-import java.io.Serializable;
+import Util.HibernateUtil;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 public class ChamadosDAOImp implements ChamadosDAO {
 
-    @Override
     public void save(Chamados chamado) {
-        Session session;
-        session = HibernateUtilCongfig.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
-        Serializable save = session.save(chamado);
+        session.save(chamado);
         t.commit();
     }
 
-    @Override
     public Chamados getChamado(int id) {
-        Session session = HibernateUtilCongfig.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         return (Chamados) session.load(Chamados.class, id);
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
     public List<Chamados> list() {
-        Session session = HibernateUtilCongfig.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
-        List lista = session.createQuery("select * from TB_CHAMADOS").list();
+        @SuppressWarnings("rawtypes")
+        List lista = session.createQuery("from Chamados").list();
         t.commit();
         return lista;
     }
 
-    @Override
     public void remove(Chamados chamado) {
-        Session session = HibernateUtilCongfig.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
         session.delete(chamado);
         t.commit();
     }
 
-    @Override
     public void update(Chamados chamado) {
-        Session session = HibernateUtilCongfig.getSessionFactory().openSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction t = session.beginTransaction();
         session.update(chamado);
         t.commit();
