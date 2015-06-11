@@ -10,7 +10,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class ChamadosDAOImp implements ChamadosDAO {
+public class ChamadosDAOImp implements DAO.ChamadosDAO {
 
     public void save(Chamados chamado) {
         Session session = HibernateUtil.getSessionFactory().openSession();
