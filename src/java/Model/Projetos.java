@@ -1,5 +1,6 @@
 package Model;
 
+import com.sun.org.apache.xerces.internal.impl.dv.xs.DecimalDV;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
