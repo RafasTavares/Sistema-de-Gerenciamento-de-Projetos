@@ -1,19 +1,42 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Gerenciador de Projetos</title>
+        <title>SGP - Sistema de Gerenciamento de Projetos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <h:form>
-            <ul>
-                <li><h:commandLink value="Novo Chamado" action="#{indexController.ManterChamados}"/></li><br/>
-                <li><h:commandLink value="Nova Tarefa" action="#{indexController.ManterTarefas}"/></li><br/>
-                <li><h:commandLink value="Nova Empresa" action="#{indexController.ManterEmpresas}"/></li><br/>
-                <li><h:commandLink value="Novo Projeto" action="#{indexController.ManterProjetos}"/></li><br/>
-            </ul>
-        </h:form>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="0" header="SVI - Controle de Registro"
+                          resizable="false" closable="false" collapsible="false" style="font-size: 20px; font-family: Arial">
+            </p:layoutUnit><p:layoutUnit position="west" size="200" header="Menu" resizable="true" closable="false" collapsible="false">
+                <p:menu style="width: 96%">
+                    <p:submenu label="Inicio">
+                        <p:menuitem value="index" url="index.xhtml"/>
+                    </p:submenu>
+                    <p:submenu label="Cadastros...">
+                        <p:menuitem value="Consultas" action="#{chamadosController.prepararAddChamado}"/>
+                        <p:menuitem value="Projetos" action="#{projetosController.prepararAddProjeto}"/>
+                        <p:menuitem value="Empresas" action="#{empresasController.PrepararAddEmpresa}"/>
+                        <p:menuitem value="Tarefas" action="#{tarefasController.prepararAddTarefa}"/>
+                    </p:submenu>
+                    <p:submenu label="Consultas">
+                        <p:menuitem value="Consulta Chamados" action="#{indexController.ManterChamados}"/>
+                        <p:menuitem value="Consulta Projetos" action="#{indexController.manterProjetos}"/>
+                        <p:menuitem value="Consulta Empresas" action="#{indexController.manterEmpresas}"/>
+                        <p:menuitem value="Consulta Tarefas" action="#{indexController.manterTarefas}"/>
+                    </p:submenu>
+                </p:menu>
+            </p:layoutUnit>
+            <p:layoutUnit position="center" header="Sistema">
+                <ui:insert name="content">
+                </ui:insert>
+            </p:layoutUnit>
+            <p:layoutUnit position="south" size="50" header="Atomosys" resizable="false" closable="false" collapsible="false">
+            </p:layoutUnit>
+        </p:layout>
     </h:body>
 </html>
