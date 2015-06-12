@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SGP - Tarefas Rápidas</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+    <style>
+        html {
+            background: #4e5156;
+            background: radial-gradient(center, ellipse cover, #4e5156 0%, #262626 80%, #141414 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#4e5156', endColorstr='#141414', GradientType=1);
+            height: 100%;
+        }
+        
+        .mylist {
+            color: #fff;
+            font: 32px 'Open sans';
+            letter-spacing: -2px;
+            float: left;
+            margin-bottom: 0.3em;
+        }
+        
+        .reloader {
+            color: #fff;
+            font: 30px 'Open sans';
+            float: right;
+            cursor: pointer;
+        }
+        
+        .reloader:hover {
+            font-weight: bold;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .todolist {
+            box-sizing: border-box;
+            display: block;
+            margin: 1em auto;
+            width: 450px;
+            font: 18px 'Open sans';
+        }
+        
+        .tasklist {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            box-sizing: border-box;
+            list-style: none;
+            display: block;
+            width: 100%;
+            padding: 1em;
+            margin: 2px 0;
+            transition: all 0.25s cubic-bezier(0.37, 0.69, 0.19, 1.995);
+            position: relative;
+            left: 0px;
+        }
+        
+        .task {
+            box-sizing: border-box;
+            list-style: none;
+            display: block;
+            width: 100%;
+            padding: 1em;
+            margin: 2px 0;
+            transition: all 0.25s cubic-bezier(0.37, 0.69, 0.19, 1.995);
+            position: relative;
+            left: 0px;
+            background: #eee;
+            cursor: pointer;
+            color: #444;
+        }
+        
+        .task:hover {
+            background: #ccc;
+        }
+        
+        .done {
+            background: #2ccf31!important;
+            left: 30px;
+        }
+        
+        .done:after {
+            content: "✓";
+            margin-left: 0.5em;
+        }
+        
+        .newtask {
+            box-sizing: border-box;
+            list-style: none;
+            display: block;
+            width: 100%;
+            padding: 1em;
+            margin: 2px 0;
+            transition: all 0.25s cubic-bezier(0.37, 0.69, 0.19, 1.995);
+            position: relative;
+            left: 0px;
+            border: 1px dashed #eee;
+        }
+        
+        .newtask input {
+            font: 1em 'Open sans';
+            width: 90%;
+            border: none;
+            background: transparent;
+            color: #fff;
+        }
+        
+        .newtask input:focus {
+            outline: none;
+        }
+        
+        .close {
+            display: none;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .close:after {
+            content: 'X';
+            font: 24px 'Open sans';
+        }
+        
+        .close:hover {
+            color: red;
+        }
+    </style>
+    <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+    <div class="todolist">
+        <div class="mylist">Tarefas</div>
+        <div class="reloader">↻</div>
+        <div class="clear"></div>
+        <ul class="tasklist">
+            <li class="task done">Criação de tarefas
+                <div class="close"></div>
+            </li>
+            <li class="newtask">
+                <input value="Insira uma nova tarefa" />
+            </li>
+        </ul>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

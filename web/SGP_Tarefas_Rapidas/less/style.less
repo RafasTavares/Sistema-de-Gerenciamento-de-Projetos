@@ -1,0 +1,116 @@
+
+
+html
+{
+background: rgb(78,81,86);
+background: radial-gradient(center, ellipse cover,  rgba(78,81,86,1) 0%,rgba(38,38,38,1) 80%,rgba(20,20,20,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e5156', endColorstr='#141414',GradientType=1 );
+  height:100%;
+}
+
+.mylist
+{
+  color:#fff;
+  font:32px 'Open sans';
+  letter-spacing:-2px;
+  float:left;
+  margin-bottom:0.3em;
+}
+
+.reloader
+{
+  color:#fff;
+  font:30px 'Open sans';
+  float:right;
+  cursor:pointer;
+  &:hover {
+    font-weight:bold;
+  }
+}
+
+.clear
+{
+  clear:both;
+}
+
+.todolist
+{
+  box-sizing:border-box;
+  display:block;
+  margin:1em auto;
+  width:450px;
+  font:18px 'Open sans';
+}
+
+.tasklist
+{
+  margin:0;
+  padding:0;
+}
+
+.container
+{
+  box-sizing:border-box;
+  list-style:none;
+  display:block;
+  width:100%;
+  padding:1em;
+  margin:2px 0;
+  transition:all 0.25s cubic-bezier(0.370, 0.690, 0.190, 1.995);
+  position:relative;
+  left:0px;
+}
+
+.task
+{
+  .container;
+  background:#eee;
+  cursor:pointer;
+  color:#444;
+  &:hover {
+    background:#ccc;
+  }
+}
+
+.done
+{
+  background:#2ccf31!important;
+  left:30px;
+  &:after {
+    content:"✓";
+    margin-left:0.5em;
+  }
+}
+
+.newtask
+{
+  .container;
+  border:1px dashed #eee;
+  input {
+    font:1em 'Open sans';
+    width:90%;
+    border: none;
+    background: transparent;
+    color:#fff;
+    &:focus {
+      outline:none;
+    }
+  }
+}
+
+.close
+{
+  display:none;
+  position:absolute;
+  right:12px;
+  top:12px;
+  width:20px;
+  height:20px;
+  &:after {
+    content:'X';
+    font:24px 'Open sans';
+  }
+  &:hover {
+    color:red;
+  }
+}
